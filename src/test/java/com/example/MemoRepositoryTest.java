@@ -11,9 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 @SpringBootTest
-public class MemberRepositoryTest {
+public class MemoRepositoryTest {
 
     @Autowired
     MemoRepository memoRepository;
@@ -24,7 +25,7 @@ public class MemberRepositoryTest {
         System.out.println(memoRepository.getClass().getName());
         System.out.println("=================================");
     }
-/*
+
     @Test
     public void testInsertDummies(){
         // 100개의 새로운 Memo객체를 생성하고
@@ -34,7 +35,7 @@ public class MemberRepositoryTest {
             memoRepository.save(memo);
         });
     }
-*/
+
     //조회
     @Test
     public void testSelect(){
